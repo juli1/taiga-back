@@ -46,9 +46,9 @@ class MentionsExtension(Extension):
 
     def extendMarkdown(self, md):
         MENTION_RE = r"\B(@)([\w.-]+)\b"
-        mentionsPattern = MentionsPattern(MENTION_RE, project=self.project)
-        mentionsPattern.md = md
-        md.inlinePatterns.register(mentionsPattern, "mentions", 80)
+        mentions_pattern = MentionsPattern(MENTION_RE, project=self.project)
+        mentions_pattern.md = md
+        md.inlinePatterns.register(mentions_pattern, "mentions", 80)
 
 
 class MentionsPattern(Pattern):
